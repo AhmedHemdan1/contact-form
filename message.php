@@ -18,7 +18,7 @@ if (!empty($email) && !empty($message)) {
             . "\nRegards, \n$name";
         $header = "From: $email";
 
-        if (mail($receiver, $subject, $body, $sender)) {
+        if (mail($receiver, $subject, $body, $header)) {
             echo 'Your message has been sent!';
         } else {
             echo 'Sorry, Failed to send your message!';
